@@ -1,0 +1,20 @@
+{
+    "id": "fake_freeze",
+    "version": "0.1",
+    "name": "Fake Freeze",
+    "description": "A MCDR plugin that disable time pass and lower tick speed when no player on server.",
+    "author": [
+        "Jeb Feng"
+    ],
+    "link": "https://github.com/Ranzeplay/fake-freeze",
+    "dependencies": {
+        "mcdreforged": ">=2.0.0",
+        "delayexe": ">=1.3.0",
+        "kpi": ">=1.3.0"
+    },
+
+    "resources": [
+        "LICENSE"
+    ],
+    "entrypoint": "fake_freeze.main"
+}
