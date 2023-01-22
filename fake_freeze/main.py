@@ -7,7 +7,7 @@ global is_all_left
 
 def on_load(server: PluginServerInterface, prev_module):
     global is_all_left
-    is_all_left = False
+    is_all_left = True
     server.logger.info('Registering events')
     server.register_event_listener(delayexe.ON_LAST_PLAYER_LEAVE, lambda *args: all_left(server))
 
@@ -23,6 +23,7 @@ def on_player_joined(server: PluginServerInterface, player: str, info: Info):
         server.register_event_listener(delayexe.ON_LAST_PLAYER_LEAVE, lambda *args: all_left(server))
         server.execute('tick rate 20')
         server.execute('gamerule doDaylightCycle true')
+        is_all_left = False
 
 
 def all_left(server: PluginServerInterface):
